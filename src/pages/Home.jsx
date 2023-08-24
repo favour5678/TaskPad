@@ -1,5 +1,6 @@
 import React from "react";
 import taskImage from "../assets/taskImage.png";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -14,9 +15,9 @@ const Home = () => {
             Carefully arrange, collate, and <br /> organize your tasks for the
             <br /> Day, Week, or month!
           </p>
-          <button className="bg-green-300 w-[200px] h-[48px] rounded-full flex justify-center items-center text-white text-lg shadow-md mx-auto mt-10 md:mt-0">
+          <Link to={'/dashboard'} className="bg-green-300 w-[200px] h-[48px] rounded-full flex justify-center items-center text-white text-lg shadow-md mx-auto mt-10 md:mt-0">
             Get Started
-          </button>
+          </Link>
         </div>
         <div className="flex flex-col md:items-end justify-center">
           <p className="md:text-xl font-bold bg-green-300 w-24 md:w-28 h-7 md:h-9 rounded-full flex justify-center items-center md:mb-12">
