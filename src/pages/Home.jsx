@@ -1,5 +1,5 @@
 import React from "react";
-import taskImage from "../assets/taskImage.png";
+import taskImage from "../images/taskImage.png";
 import { Link } from "react-router-dom";
 
 const Home = () => {
