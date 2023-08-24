@@ -1,6 +1,7 @@
 import React from "react";
 import taskImage from "../images/taskImage.png";
 import { Link } from "react-router-dom";
+import taskLogo from '../images/logo.svg'
 
 const Home = () => {
   return (
@@ -20,9 +21,7 @@ const Home = () => {
           </Link>
         </div>
         <div className="flex flex-col md:items-end justify-center">
-          <p className="md:text-xl font-bold bg-green-300 w-24 md:w-28 h-7 md:h-9 rounded-full flex justify-center items-center md:mb-12">
-            TaskPad
-          </p>
+          <img src={taskLogo} alt="task-logo" className="h-[38px] md:h-[44px] md:mb-10"/>
           <p className="md:hidden text-2xl font-bold text-center mt-10 mb-6">
             Manage your Daily <br /> Tasks with
             <span className="text-green-400"> To-do</span>
@@ -30,7 +29,7 @@ const Home = () => {
           <img
             src={taskImage}
             alt="task image"
-            className="w-full h-[340px] md:h-[340px] object-cover "
+            className="w-full h-[340px] md:h-[340px] object-cover"
           />
         </div>
       </div>
