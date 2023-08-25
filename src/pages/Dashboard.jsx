@@ -5,6 +5,7 @@ import { BsFilterLeft } from "react-icons/bs";
 import { BiSearch } from "react-icons/bi";
 import { IoMdSettings } from "react-icons/io";
 import userIcon from "../images/userIcon.png";
+import TodoTemplate from "../templates/TodoTemplate";
 
 const Dashboard = () => {
   return (
@@ -57,6 +58,7 @@ const Dashboard = () => {
                 <IoMdSettings className="text-xl cursor-pointer"/>
             </div>
         </div>
+        <TodoTemplate />
       </div>
     </section>
   );
