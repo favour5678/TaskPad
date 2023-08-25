@@ -49,7 +49,7 @@ const Dashboard = () => {
       </div>
 
         {/* right section of dashboard */}
-      <div className="bg-nature bg-center bg-cover bg-no-repeat brightness-75 w-[80%] h-screen">
+      <div className="bg-nature bg-center bg-cover bg-no-repeat  w-[80%] h-screen">
         <div className="flex mx-auto items-center bg-green-50 rounded-full w-4/5 h-11 mt-6">
             <input type="text" placeholder="Hello, User" className="w-full outline-none h-full bg-transparent px-6"/>
             <div className="flex space-x-4 pr-4">
