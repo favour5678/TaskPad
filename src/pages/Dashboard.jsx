@@ -11,8 +11,15 @@ import TodoTemplate from "../templates/TodoTemplate";
 const Dashboard = () => {
   const [toDoList, setToDoList] = useState([])
   const [toDoValue, setToDoValue] = useState('')
+
+  const addTodoValue = () => {
+    if (toDoValue.trim() !== '') {
+      setToDoList([...toDoList, toDoValue])
+      setToDoValue('')
+    }
+  }
   
-  console.log(toDoValue);
+  console.log(toDoList);
 
   return (
     <section className="container max-w-full h-screen flex">
@@ -76,12 +83,12 @@ const Dashboard = () => {
             value={toDoValue}
             onChange={(e) => setToDoValue(e.target.value)}
           />
-          <button className="outline-none" >
+          <button className="outline-none" onClick={addTodoValue}>
             <BsFillPlusCircleFill className="text-2xl" />
           </button>
         </div>
-        <TodoTemplate />
-        {/* <TodoTemplate propsToDo={toDoList}/> */}
+        {/* <TodoTemplate /> */}
+        <TodoTemplate propsToDo={toDoList}/>
       </div>
     </section>
   );

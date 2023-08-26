@@ -17,10 +17,12 @@
 
 // export default TodoTemplate;
 
-const TodoTemplate = () => {
+const TodoTemplate = (props) => {
+  const toDoList = props.propsToDo
+
   return (
     <section>
-
+      {toDoList}
     </section>
   )
 }
