@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 import { IoEllipseSharp } from "react-icons/io5";
 import { BsFilterLeft } from "react-icons/bs";
@@ -9,6 +9,11 @@ import userIcon from "../images/userIcon.png";
 import TodoTemplate from "../templates/TodoTemplate";
 
 const Dashboard = () => {
+  const [toDoList, setToDoList] = useState([])
+  const [toDoValue, setToDoValue] = useState('')
+  
+  
+
   return (
     <section className="container max-w-full h-screen flex">
       {/* left section of dashboard */}
@@ -68,12 +73,15 @@ const Dashboard = () => {
             type="text"
             placeholder="I want to ......."
             className="w-[40%] h-10 rounded-xl outline-none px-5 bg-green-50"
+            // value={inputValue}
+            onChange={(e) => setToDoValue(e.target.value)}
           />
-          <button>
+          <button className="outline-none" >
             <BsFillPlusCircleFill className="text-2xl" />
           </button>
         </div>
         <TodoTemplate />
+        {/* <TodoTemplate propsToDo={toDoList}/> */}
       </div>
     </section>
   );
