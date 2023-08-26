@@ -12,7 +12,7 @@ const Dashboard = () => {
   const [toDoList, setToDoList] = useState([])
   const [toDoValue, setToDoValue] = useState('')
   
-  
+  console.log(toDoValue);
 
   return (
     <section className="container max-w-full h-screen flex">
@@ -73,7 +73,7 @@ const Dashboard = () => {
             type="text"
             placeholder="I want to ......."
             className="w-[40%] h-10 rounded-xl outline-none px-5 bg-green-50"
-            // value={inputValue}
+            value={toDoValue}
             onChange={(e) => setToDoValue(e.target.value)}
           />
           <button className="outline-none" >

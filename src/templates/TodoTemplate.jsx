@@ -20,7 +20,9 @@
 const TodoTemplate = () => {
   return (
     <section>
-      
+
     </section>
   )
 }
+
+export default TodoTemplate;
