@@ -33,7 +33,7 @@ const Dashboard = () => {
           />
           <p className="font-bold text-lg">Hello User &#128075;</p>
         </div>
-        <button className="flex justify-center items-center mx-auto space-x-4 bg-green-400 w-[230px] h-[48px] rounded-full shadow-sm">
+        <button onClick={addTodoValue} className="flex justify-center items-center mx-auto space-x-4 bg-green-400 w-[230px] h-[48px] rounded-full shadow-sm">
           <AiOutlinePlus className="text-xl" />
           <p className="text-lg font-bold">Create task</p>
         </button>
