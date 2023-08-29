@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 import { IoEllipseSharp } from "react-icons/io5";
 import { BsFilterLeft } from "react-icons/bs";
@@ -12,12 +12,18 @@ const Dashboard = () => {
   const [toDoList, setToDoList] = useState([])
   const [toDoValue, setToDoValue] = useState('')
 
-  const addTodoValue = () => {
+  const addTodo = () => {
     if (toDoValue.trim() !== '') {
       setToDoList([...toDoList, toDoValue])
       setToDoValue('')
     }
   }
+
+  const deleteTodo = (todoIndex) => {
+    const updatedTodoList =   toDoList.filter((_, i) => i !== todoIndex)
+    setToDoList(updatedTodoList)
+  }
+
   
   console.log(toDoList);
 
@@ -33,7 +39,7 @@ const Dashboard = () => {
           />
           <p className="font-bold text-lg">Hello User &#128075;</p>
         </div>
-        <button onClick={addTodoValue} className="flex justify-center items-center mx-auto space-x-4 bg-green-400 w-[230px] h-[48px] rounded-full shadow-sm">
+        <button onClick={addTodo} className="flex justify-center items-center mx-auto space-x-4 bg-green-400 w-[230px] h-[48px] rounded-full shadow-sm">
           <AiOutlinePlus className="text-xl" />
           <p className="text-lg font-bold">Create task</p>
         </button>
@@ -83,12 +89,12 @@ const Dashboard = () => {
             value={toDoValue}
             onChange={(e) => setToDoValue(e.target.value)}
           />
-          <button className="outline-none" onClick={addTodoValue}>
+          <button className="outline-none" onClick={addTodo}>
             <BsFillPlusCircleFill className="text-2xl" />
           </button>
         </div>
         {/* <TodoTemplate /> */}
-        <TodoTemplate propsToDo={toDoList}/>
+        <TodoTemplate propsTodo={toDoList} deleteTodo={deleteTodo}/>
       </div>
     </section>
   );
