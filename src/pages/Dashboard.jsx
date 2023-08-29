@@ -94,7 +94,7 @@ const Dashboard = () => {
           </button>
         </div>
         {/* <TodoTemplate /> */}
-        <TodoTemplate propsTodo={toDoList} deleteTodo={deleteTodo}/>
+        <TodoTemplate todo={toDoList} deleteTodo={deleteTodo}/>
       </div>
     </section>
   );

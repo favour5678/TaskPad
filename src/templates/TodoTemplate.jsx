@@ -2,10 +2,8 @@ import { AiFillDelete } from "react-icons/ai";
 import { IoEllipseSharp } from "react-icons/io5";
 
 const TodoTemplate = (props) => {
-  const toDoList = props.propsTodo
+  const toDoList = props.todo
   const deleteTodo = props.deleteTodo
-
-  // const {  }
 
   return (
     <section className="mt-10 bg-green-50 rounded w-[40%] ml-4">
