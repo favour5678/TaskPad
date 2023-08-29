@@ -16,11 +16,15 @@ const Dashboard = () => {
 
   const addTodo = () => {
     if (toDoValue.trim() !== "") {
-      setToDoList([...toDoList, toDoValue]);
+      const newTodo = {
+        task: toDoValue,
+        timestamp: new Date().toLocaleString()
+      }
+      setToDoList([...toDoList, newTodo]);
+      // setToDoList([...toDoList, toDoValue]);
       setToDoValue("");
       setSuccessMessage(true);
       setTimeout(() => setSuccessMessage(false), 700);
-      console.log("task created successfully");
     }
   };
 
@@ -92,22 +96,11 @@ const Dashboard = () => {
             Task deleted successfully &#9989;
           </p>
         )}
-        <div className="flex mx-auto items-center bg-green-50 rounded-full w-4/5 h-11 mt-6">
-          <input
-            type="text"
-            placeholder="Hello, User"
-            className="w-full outline-none h-full bg-transparent px-6"
-          />
-          <div className="flex space-x-4 pr-4">
-            <BiSearch className="text-xl cursor-pointer" />
-            <IoMdSettings className="text-xl cursor-pointer" />
-          </div>
-        </div>
         <div className="flex items-center justify-center pt-6 space-x-2">
           <input
             type="text"
             placeholder="I want to ......."
-            className="w-[40%] h-10 rounded-xl outline-none px-5 bg-green-50"
+            className="w-[50%] h-10 rounded-xl outline-none px-5 bg-green-50"
             value={toDoValue}
             onChange={(e) => setToDoValue(e.target.value)}
           />
