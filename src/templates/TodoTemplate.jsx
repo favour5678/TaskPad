@@ -11,12 +11,12 @@ const TodoTemplate = (props) => {
       {toDoList.map((todo, index) => (
         <div
           key={index}
-          className="flex justify-around items-center mb-2 lg:mb-3 pl-2 bg-white rounded shadow-md "
+          className="flex justify-around items-center mb-2 lg:mb-3 pl-2 bg-white rounded shadow-md"
         >
           <IoEllipseSharp className="text-[6px] lg:text-[8px]" />
-          <p className="text-[15px] lg:text-base font-bold text-gray-800 w-full lg:w-[50%]">{todo.task}</p>
+          <p className="text-[15px] lg:text-base font-bold text-gray-800 w-[50%] truncate">{todo.task}</p>
           <AiFillDelete
-            className="cursor-pointer text-gray-800"
+            className="cursor-pointer text-gray-800 "
             onClick={() => deleteTodo(index)}
           />
           <p className="text-xs lg:text-base font-semibold text-gray-500">
