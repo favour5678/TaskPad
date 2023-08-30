@@ -6,17 +6,22 @@ const TodoTemplate = (props) => {
   const deleteTodo = props.deleteTodo;
 
   return (
-    <section className="mt-10  rounded w-[90%] mx-auto" >
+    <section className="mt-10  rounded w-[90%] mx-auto">
       <h2 className="text-center text-xl font-bold mb-3">Today's Task</h2>
       {toDoList.map((todo, index) => (
-        <div key={index} className="flex justify-around items-center mb-3 pl-2 bg-white rounded shadow-md ">
+        <div
+          key={index}
+          className="flex justify-around items-center mb-3 pl-2 bg-white rounded shadow-md "
+        >
           <IoEllipseSharp className="text-[8px]" />
           <p className="font-bold text-gray-800 w-[50%]">{todo.task}</p>
           <AiFillDelete
             className="cursor-pointer text-gray-800"
             onClick={() => deleteTodo(index)}
-            />
-          <p className="font-semibold text-gray-500">created at: {todo.timestamp}</p>
+          />
+          <p className="font-semibold text-gray-500">
+            created at: {todo.timestamp}
+          </p>
         </div>
       ))}
     </section>

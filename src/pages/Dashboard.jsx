@@ -2,9 +2,6 @@ import React, { useState } from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 import { IoEllipseSharp } from "react-icons/io5";
 import { BsFilterLeft } from "react-icons/bs";
-import { BiSearch } from "react-icons/bi";
-import { IoMdSettings } from "react-icons/io";
-import { BsFillPlusCircleFill } from "react-icons/bs";
 import userIcon from "../images/userIcon.png";
 import TodoTemplate from "../templates/TodoTemplate";
 
@@ -18,10 +15,9 @@ const Dashboard = () => {
     if (toDoValue.trim() !== "") {
       const newTodo = {
         task: toDoValue,
-        timestamp: new Date().toLocaleString()
-      }
+        timestamp: new Date().toLocaleString(),
+      };
       setToDoList([...toDoList, newTodo]);
-      // setToDoList([...toDoList, toDoValue]);
       setToDoValue("");
       setSuccessMessage(true);
       setTimeout(() => setSuccessMessage(false), 1000);
@@ -49,13 +45,6 @@ const Dashboard = () => {
           />
           <p className="font-bold text-lg">Hello User &#128075;</p>
         </div>
-        <button
-          onClick={addTodo}
-          className="flex justify-center items-center mx-auto space-x-4 bg-green-400 w-[230px] h-[48px] rounded-full shadow-sm"
-        >
-          <AiOutlinePlus className="text-xl" />
-          <p className="text-lg font-bold">Create task</p>
-        </button>
         <p className="font-bold text-xl bg-green-200 h-[48px] flex items-center pl-6">
           Calendar
         </p>
@@ -99,13 +88,17 @@ const Dashboard = () => {
         <div className="flex items-center justify-center pt-6 space-x-2">
           <input
             type="text"
-            placeholder="I want to ......."
+            placeholder="Create task"
             className="w-[50%] h-10 rounded-xl outline-none px-5 bg-green-50"
             value={toDoValue}
             onChange={(e) => setToDoValue(e.target.value)}
           />
-          <button className="outline-none" onClick={addTodo}>
-            <BsFillPlusCircleFill className="text-2xl" />
+          <button
+            onClick={addTodo}
+            className="flex justify-center items-center mx-auto space-x-4 bg-green-400 w-[150px] h-[40px] rounded-full shadow-sm"
+          >
+            <AiOutlinePlus className="text-lg" />
+            <p className="font-bold">Create task</p>
           </button>
         </div>
 
