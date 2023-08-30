@@ -30,41 +30,41 @@ const Dashboard = () => {
     setDeletedMessage(true);
     setTimeout(() => setDeletedMessage(false), 1000);
   };
-  
+
 
   return (
     <section className="container max-w-full h-screen flex">
       {/* left section of dashboard */}
-      <div className="bg-green-50 w-[20%] h-full space-y-10 pt-6">
-        <div className="flex items-center justify-center space-x-6">
+      <div className="bg-green-50 w-[20%] h-full space-y-20 lg:space-y-10 pt-6">
+        <div className="flex items-center justify-center space-x-3 lg:space-x-6">
           <img
             src={userIcon}
             alt="user-icon"
-            className="h-12 bg-white rounded-full"
+            className="h-8 lg:h-12 bg-white rounded-full"
           />
-          <p className="font-bold text-lg">Hello User &#128075;</p>
+          <p className="font-bold text-base lg:text-lg">Hello User &#128075;</p>
         </div>
-        <p className="font-bold text-xl bg-green-200 h-[48px] flex items-center pl-6">
+        <p className="font-bold text-base lg:text-xl bg-green-200 h-[48px] flex items-center pl-6">
           Calendar
         </p>
         <div className="space-y-3 pl-6">
-          <p className="font-bold text-xl">Sort</p>
+          <p className="font-bold text-base lg:text-xl">Sort</p>
           <ol>
-            <li className="font-semibold flex items-center">
-              <IoEllipseSharp className="text-green-400 text-sm mr-2" />
+            <li className="font-semibold flex items-center text-sm lg:text-base">
+              <IoEllipseSharp className="text-green-400 text-xs lg:text-sm mr-2" />
               Day
             </li>
-            <li className="font-semibold flex items-center">
-              <IoEllipseSharp className="text-yellow-400 text-sm mr-2" />
+            <li className="font-semibold flex items-center text-sm lg:text-base">
+              <IoEllipseSharp className="text-yellow-400 text-xs lg:text-sm mr-2" />
               Month
             </li>
-            <li className="font-semibold flex items-center">
-              <IoEllipseSharp className="text-blue-400 text-sm mr-2" />
+            <li className="font-semibold flex items-center text-sm lg:text-base">
+              <IoEllipseSharp className="text-blue-400 text-xs lg:text-sm mr-2" />
               Year
             </li>
           </ol>
         </div>
-        <p className="pt-28">
+        <p className="pt-10 lg:pt-28">
           <BsFilterLeft className="text-4xl ml-6 text-green-400" />
         </p>
       </div>
