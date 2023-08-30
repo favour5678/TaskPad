@@ -16,7 +16,7 @@ const Home = () => {
             Carefully arrange, collate, and <br /> organize your tasks for the
             <br /> Day, Week, or month!
           </p>
-          <Link to={'/dashboard'} className="bg-green-300 w-[200px] h-[48px] rounded-full flex justify-center items-center text-white text-lg shadow-md mx-auto mt-10 md:mt-0">
+          <Link to={'/dashboard'} className="bg-green-300 w-[200px] h-[48px] rounded-full flex justify-center items-center text-white text-lg shadow-md mx-auto mb-3 mt-10 md:mt-0">
             Get Started
           </Link>
         </div>
