@@ -7,7 +7,7 @@ const TodoTemplate = (props) => {
 
   return (
     <section className="mt-10  rounded w-[90%] mx-auto" >
-      {/* <h2 className="text-center text-xl font-bold mb-3">Today's Task</h2> */}
+      <h2 className="text-center text-xl font-bold mb-3">Today's Task</h2>
       {toDoList.map((todo, index) => (
         <div key={index} className="flex justify-around items-center mb-3 pl-2 bg-white rounded shadow-md ">
           <IoEllipseSharp className="text-[8px]" />
