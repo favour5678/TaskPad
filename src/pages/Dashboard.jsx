@@ -24,7 +24,7 @@ const Dashboard = () => {
       // setToDoList([...toDoList, toDoValue]);
       setToDoValue("");
       setSuccessMessage(true);
-      setTimeout(() => setSuccessMessage(false), 700);
+      setTimeout(() => setSuccessMessage(false), 1000);
     }
   };
 
@@ -32,7 +32,7 @@ const Dashboard = () => {
     const updatedTodoList = toDoList.filter((_, i) => i !== todoIndex);
     setToDoList(updatedTodoList);
     setDeletedMessage(true);
-    setTimeout(() => setDeletedMessage(false), 700);
+    setTimeout(() => setDeletedMessage(false), 1000);
   };
 
   console.log(toDoList);

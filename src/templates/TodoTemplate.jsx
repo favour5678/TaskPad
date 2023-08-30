@@ -11,7 +11,7 @@ const TodoTemplate = (props) => {
       {toDoList.map((todo, index) => (
         <div key={index} className="flex justify-around items-center mb-3 pl-2 bg-white rounded shadow-md ">
           <IoEllipseSharp className="text-[8px]" />
-          <p className="font-bold text-gray-800">{todo.task}</p>
+          <p className="font-bold text-gray-800 w-[50%]">{todo.task}</p>
           <AiFillDelete
             className="cursor-pointer text-gray-800"
             onClick={() => deleteTodo(index)}
