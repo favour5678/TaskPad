@@ -33,9 +33,9 @@ const Dashboard = () => {
 
 
   return (
-    <section className="container max-w-full h-screen flex">
+    <section className="container max-w-full flex">
       {/* left section of dashboard */}
-      <div className="bg-green-50 w-[20%] h-full space-y-20 lg:space-y-10 pt-6">
+      <div className=" bg-green-50 h-screen w-[20%] space-y-20 lg:space-y-10 pt-6">
         <div className="flex items-center justify-center space-x-3 lg:space-x-6">
           <img
             src={userIcon}
@@ -44,10 +44,10 @@ const Dashboard = () => {
           />
           <p className="font-bold text-base lg:text-lg">Hello User &#128075;</p>
         </div>
-        <p className="font-bold text-base lg:text-xl bg-green-200 h-[48px] flex items-center pl-6">
+        <p className="font-bold text-base lg:text-xl bg-green-200 h-[48px] flex items-center pl-3 lg:pl-6">
           Calendar
         </p>
-        <div className="space-y-3 pl-6">
+        <div className="space-y-3 pl-3 lg:pl-6">
           <p className="font-bold text-base lg:text-xl">Sort</p>
           <ol>
             <li className="font-semibold flex items-center text-sm lg:text-base">
@@ -72,15 +72,15 @@ const Dashboard = () => {
       {/* right section of dashboard */}
       <div
         id="right_section"
-        className="bg-nature bg-center bg-cover bg-no-repeat  w-[80%] h-screen"
+        className="bg-nature bg-center bg-cover bg-no-repeat w-[80%] h-screen overflow-y-scroll"
       >
         {successMessage && (
-          <p className="bg-white text-green-600 rounded-sm mt-3 w-[26%] h-10 flex justify-center items-center mx-auto font-bold">
+          <p className="bg-white text-xs lg:text-base text-green-600 rounded-sm mt-3 w-[35%] lg:w-[26%] h-6 lg:h-10 flex justify-center items-center mx-auto font-bold">
             Task created successfully &#9989;
           </p>
         )}
         {deletedMessage && (
-          <p className="bg-white text-red-600 rounded-sm mt-3 w-[26%] h-10 flex justify-center items-center mx-auto font-bold">
+          <p className="bg-white text-xs lg:text-base text-red-600 rounded-sm mt-3 w-[35%] lg:w-[26%] h-6 lg:h-10 flex justify-center items-center mx-auto font-bold">
             Task deleted successfully &#9989;
           </p>
         )}
@@ -88,16 +88,16 @@ const Dashboard = () => {
           <input
             type="text"
             placeholder="Create task"
-            className="w-[50%] h-10 rounded-xl outline-none px-5 bg-green-50"
+            className="w-[50%] h-8 lg:h-10 rounded-xl outline-none px-5 bg-green-50"
             value={toDoValue}
             onChange={(e) => setToDoValue(e.target.value)}
           />
           <button
             onClick={addTodo}
-            className="flex justify-center items-center mx-auto space-x-4 bg-green-400 w-[150px] h-[40px] rounded-full shadow-sm"
+            className="flex justify-center items-center mx-auto space-x-2 bg-green-400 w-[120px] lg:w-[150px] h-[30px] lg:h-[40px] rounded-full shadow-sm"
           >
-            <AiOutlinePlus className="text-lg" />
-            <p className="font-bold">Create task</p>
+            <AiOutlinePlus className="text-base lg:text-lg" />
+            <p className="text-sm lg:text-base font-bold">Create task</p>
           </button>
         </div>
 
