@@ -30,8 +30,7 @@ const Dashboard = () => {
     setDeletedMessage(true);
     setTimeout(() => setDeletedMessage(false), 1000);
   };
-
-  console.log(toDoList);
+  
 
   return (
     <section className="container max-w-full h-screen flex">
