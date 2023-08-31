@@ -36,13 +36,13 @@ const Dashboard = () => {
     <section className="container max-w-full flex">
       {/* left section of dashboard */}
       <div className=" bg-green-50 h-screen w-[20%] space-y-20 lg:space-y-10 pt-6">
-        <div className="flex items-center justify-center space-x-3 lg:space-x-6">
+        <div className="block md:flex items-center justify-center space-x-3 lg:space-x-6">
           <img
             src={userIcon}
             alt="user-icon"
-            className="h-8 lg:h-12 bg-white rounded-full"
+            className="h-8 lg:h-12 bg-white rounded-full mx-auto mb-3 md:mb-0"
           />
-          <p className="font-bold text-base lg:text-lg">Hello User &#128075;</p>
+          <p className="text-center font-bold text-sm md:text-base lg:text-lg">Hello User <span className="text-sm md:text-base">&#128075;</span></p>
         </div>
         <p className="font-bold text-base lg:text-xl bg-green-200 h-[48px] flex items-center pl-3 lg:pl-6">
           Calendar
