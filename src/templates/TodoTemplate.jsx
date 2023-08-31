@@ -7,7 +7,7 @@ const TodoTemplate = (props) => {
 
   return (
     <section className="mt-4 lg:mt-8 rounded text-center w-[90%] mx-auto">
-      <h2 className="text-center text-[17px] lg:text-xl font-bold mb-3">Today's Task</h2>
+      <h2 className="text-center text-[16px] lg:text-xl font-bold mb-3">Today's Task</h2>
       {toDoList.map((todo, index) => (
         <div
           key={index}
@@ -19,7 +19,7 @@ const TodoTemplate = (props) => {
             className="cursor-pointer text-gray-800 "
             onClick={() => deleteTodo(index)}
           />
-          <p className="text-xs lg:text-base font-semibold text-gray-500">
+          <p className="text-[10px] md:text-xs lg:text-base font-semibold text-gray-500">
             created at: {todo.timestamp}
           </p>
         </div>

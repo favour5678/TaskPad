@@ -42,30 +42,30 @@ const Dashboard = () => {
             alt="user-icon"
             className="h-8 lg:h-12 bg-white rounded-full mx-auto mb-3 md:mb-0"
           />
-          <p className="text-center font-bold text-sm md:text-base lg:text-lg">Hello User <span className="text-sm md:text-base">&#128075;</span></p>
+          <p className="text-center font-bold text-sm md:text-base lg:text-lg">Hello User <span className="hidden md:text-base">&#128075;</span></p>
         </div>
-        <p className="font-bold text-base lg:text-xl bg-green-200 h-[48px] flex items-center pl-3 lg:pl-6">
+        <p className="font-bold text-sm md:text-base lg:text-xl bg-green-200 h-[48px] flex items-center pl-1 lg:pl-6">
           Calendar
         </p>
-        <div className="space-y-3 pl-3 lg:pl-6">
-          <p className="font-bold text-base lg:text-xl">Sort</p>
+        <div className="space-y-3 pl-2 lg:pl-6">
+          <p className="font-bold text-sm md:text-base lg:text-xl">Sort</p>
           <ol>
-            <li className="font-semibold flex items-center text-sm lg:text-base">
-              <IoEllipseSharp className="text-green-400 text-xs lg:text-sm mr-2" />
+            <li className="font-semibold flex items-center text-xs lg:text-base">
+              <IoEllipseSharp className="text-green-400 text-[8px] lg:text-sm mr-2" />
               Day
             </li>
-            <li className="font-semibold flex items-center text-sm lg:text-base">
-              <IoEllipseSharp className="text-yellow-400 text-xs lg:text-sm mr-2" />
+            <li className="font-semibold flex items-center text-xs lg:text-base">
+              <IoEllipseSharp className="text-yellow-400 text-[8px] lg:text-sm mr-2" />
               Month
             </li>
-            <li className="font-semibold flex items-center text-sm lg:text-base">
-              <IoEllipseSharp className="text-blue-400 text-xs lg:text-sm mr-2" />
+            <li className="font-semibold flex items-center text-xs lg:text-base">
+              <IoEllipseSharp className="text-blue-400 text-[8px] lg:text-sm mr-2" />
               Year
             </li>
           </ol>
         </div>
         <p className="pt-10 lg:pt-28">
-          <BsFilterLeft className="text-4xl ml-6 text-green-400" />
+          <BsFilterLeft className="text-3xl md:text-4xl ml-6 text-green-400" />
         </p>
       </div>
 
@@ -75,29 +75,29 @@ const Dashboard = () => {
         className="bg-nature bg-center bg-cover bg-no-repeat w-[80%] h-screen overflow-y-scroll"
       >
         {successMessage && (
-          <p className="bg-white text-xs lg:text-base text-green-600 rounded-sm mt-3 w-[35%] lg:w-[26%] h-6 lg:h-10 flex justify-center items-center mx-auto font-bold">
-            Task created successfully &#9989;
+          <p className="bg-white text-xs lg:text-base text-green-600 rounded-sm mt-3 w-[55%] md:w-[35%] lg:w-[26%] h-6 lg:h-10 flex justify-center items-center mx-auto font-bold">
+            Task created successfully <span className="text-xs">&#9989;</span>
           </p>
         )}
         {deletedMessage && (
-          <p className="bg-white text-xs lg:text-base text-red-600 rounded-sm mt-3 w-[35%] lg:w-[26%] h-6 lg:h-10 flex justify-center items-center mx-auto font-bold">
-            Task deleted successfully &#9989;
+          <p className="bg-white text-xs lg:text-base text-red-600 rounded-sm mt-3 w-[55%] md:w-[35%] lg:w-[26%] h-6 lg:h-10 flex justify-center items-center mx-auto font-bold">
+            Task deleted successfully <span className="text-xs">&#9989;</span>
           </p>
         )}
         <div className="flex items-center justify-center pt-6 space-x-2">
           <input
             type="text"
             placeholder="Create task"
-            className="w-[50%] h-8 lg:h-10 rounded-xl outline-none px-5 bg-green-50"
+            className="w-[60%] h-8 lg:h-10 rounded-xl outline-none px-5 bg-green-50"
             value={toDoValue}
             onChange={(e) => setToDoValue(e.target.value)}
           />
           <button
             onClick={addTodo}
-            className="flex justify-center items-center mx-auto space-x-2 bg-green-400 w-[120px] lg:w-[150px] h-[30px] lg:h-[40px] rounded-full shadow-sm"
+            className="flex justify-center items-center mx-auto space-x-1 md:space-x-2 bg-green-400 w-[100px] md:w-[120px] lg:w-[150px] h-[30px] lg:h-[40px] rounded-full shadow-sm"
           >
-            <AiOutlinePlus className="text-base lg:text-lg" />
-            <p className="text-sm lg:text-base font-bold">Create task</p>
+            <AiOutlinePlus className="text-xs md:text-base lg:text-lg" />
+            <p className="text-[13px] md:text-base lg:text-base font-bold">Create task</p>
           </button>
         </div>
 
